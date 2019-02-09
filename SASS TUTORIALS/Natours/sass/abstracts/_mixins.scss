@@ -12,3 +12,53 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/*=============================================
+=           //MEDIA QUERY MANAGER           =
+=============================================*/
+
+/*
+0-600px:  PHONE
+600-900px:  TABLET PORTRAIT
+900-1200px:  TABLET LANDSCAPE
+1200-1800px:  NORMAL DESKTOP STYLE
+1800-INFINITY: BIG SCREEN
+*/
+
+// $breakpoint ARGUEMENT CHOICES
+/*
+- phone
+- tab-prot
+- tab-land
+- big-desktop
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    //600px
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-prot {
+    //900px
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    //1200px
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    //1800px
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
