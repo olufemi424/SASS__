@@ -70,8 +70,6 @@
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
 
     &--1 {
       background-image: linear-gradient(
@@ -149,7 +147,8 @@
     ul {
       list-style: none;
       width: 80%;
-      margin: 2rem 0 0 -2rem;
+      margin: 0 auto;
+      padding: 0;
 
       li {
         text-align: center;
@@ -176,6 +175,7 @@
   &__price--box {
     text-align: center;
     color: $color-white;
+    margin-bottom: 8rem;
   }
 
   &__price--only {

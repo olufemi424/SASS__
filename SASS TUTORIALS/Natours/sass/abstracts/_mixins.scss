@@ -33,6 +33,9 @@
 - big-desktop
 */
 
+// ORDER: BASE + TYPOGRAPHY > GENERAL LAYOUT > PAGE LAYOUT > COMPONENTS
+// 1em = 16px
+
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
     //600px
@@ -41,7 +44,7 @@
     }
   }
 
-  @if $breakpoint == tab-prot {
+  @if $breakpoint == tab-port {
     //900px
     @media (max-width: 56.25em) {
       @content;
